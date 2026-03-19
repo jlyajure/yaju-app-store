@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jazztabueno Productions | App Store</title>
+    <style>
+        /* Diseño General (Dark Theme) */
+        body { 
+            background-color: #121212; 
+            color: #ffffff; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+        }
+        
+        /* Cabecera Elegante */
+        header { 
+            background: linear-gradient(135deg, #1a1a1a, #000000); 
+            padding: 50px 20px; 
+            text-align: center; 
+            border-bottom: 3px solid #d4af37; /* Línea Dorada VIP */
+        }
+        header h1 { 
+            margin: 0; 
+            color: #d4af37; 
+            font-size: 2.8em; 
+            letter-spacing: 2px; 
+            text-transform: uppercase; 
+        }
+        header p { 
+            color: #aaaaaa; 
+            margin-top: 10px; 
+            font-size: 1.2em; 
+            font-style: italic;
+        }
+
+        /* Contenedor de las Tarjetas */
+        .container { 
+            max-width: 1100px; 
+            margin: 60px auto; 
+            padding: 0 20px; 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 40px; 
+        }
+
+        /* Tarjetas de cada App */
+        .card { 
+            background-color: #1e1e1e; 
+            border-radius: 20px; 
+            width: 300px; 
+            padding: 40px 20px; 
+            text-align: center; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6); 
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
+            border: 1px solid #333; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2); 
+            border-color: #d4af37; 
+        }
+        
+        .icon { font-size: 60px; margin-bottom: 15px; }
+        .card h2 { margin: 10px 0; color: #ffffff; font-size: 1.8em; }
+        .card p { color: #cccccc; font-size: 1em; line-height: 1.5; margin-bottom: 30px; }
+
+        /* Botones */
+        .btn { 
+            display: inline-block; 
+            padding: 12px 25px; 
+            background-color: #d4af37; 
+            color: #000000; 
+            text-decoration: none; 
+            border-radius: 30px; 
+            font-weight: bold; 
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease; 
+        }
+        .btn:hover { 
+            background-color: #f3c93f; 
+            transform: scale(1.05);
+        }
+        
+        .btn-outline { 
+            background-color: transparent; 
+            border: 2px solid #d4af37; 
+            color: #d4af37; 
+        }
+        .btn-outline:hover { 
+            background-color: #d4af37; 
+            color: #000000; 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Jazztabueno Productions</h1>
+        <p>El estudio oficial de las mejores Apps de Tico</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="card">
+            <div>
+                <div class="icon">👑</div>
+                <h2>Isla VIP</h2>
+                <p>Notificaciones flotantes premium y elegantes para que no te pierdas tus mensajes más importantes.</p>
+            </div>
+            <a href="https://drive.google.com/drive/folders/1AeM97xgxHzhmKULLwXexRVPFtnuHqA5n?usp=drive_link" target="_blank" class="btn">Descargar App</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="icon">📻</div>
+                <h2>JTBP</h2>
+                <p>La mejor experiencia de radio y entretenimiento musical directamente en tu bolsillo.</p>
+            </div>
+            <a href="https://jazztabueno-productions.vercel.app/" target="_blank" class="btn btn-outline">Visitar Web</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="icon">🎹</div>
+                <h2>Music Land</h2>
+                <p>Explora un universo de sonidos, ritmos y melodías sin límites para tus proyectos.</p>
+            </div>
+            <a href="https://music-land-app-5kl2.vercel.app/" target="_blank" class="btn btn-outline">Visitar Web</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
