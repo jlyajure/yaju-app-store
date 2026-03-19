@@ -14,10 +14,11 @@
     <meta property="og:type" content="website">
 
     <style>
+        /* Estilo Base Dark Premium */
         body { 
-            background-color: #121212; 
+            background-color: #0a0a0a; 
             color: #ffffff; 
-            font-family: 'Segoe UI', sans-serif; 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
             margin: 0; 
             padding: 0; 
         }
@@ -27,67 +28,98 @@
             padding: 60px 20px; 
             text-align: center; 
             border-bottom: 4px solid #d4af37; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        /* 👑 EL LOGO GRANDE Y REDONDO 👑 */
+        /* 👑 EL LOGO: GRANDE Y REDONDO 👑 */
         .logo-principal {
-            width: 250px; 
-            height: 250px;
+            width: 280px; /* Tamaño imponente */
+            height: 280px;
             object-fit: cover;
             border-radius: 50%; 
-            margin-bottom: 20px;
-            border: 3px solid #d4af37;
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
-            background-color: #000; /* Fondo negro por si la imagen tarda en cargar */
+            margin-bottom: 25px;
+            border: 4px solid #d4af37;
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
+            transition: transform 0.3s ease;
+        }
+        .logo-principal:hover {
+            transform: scale(1.05);
         }
 
         header h1 { 
             margin: 0; 
             color: #d4af37; 
-            font-size: 3em; 
+            font-size: 3.5em; 
             text-transform: uppercase; 
+            letter-spacing: 3px;
         }
         header p { 
             color: #aaaaaa; 
             margin-top: 15px; 
             font-size: 1.2em; 
             font-style: italic;
-            max-width: 600px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.6;
         }
 
+        /* Contenedor de Tarjetas */
         .container { 
-            max-width: 1100px; 
-            margin: 50px auto; 
+            max-width: 1200px; 
+            margin: 60px auto; 
+            padding: 0 20px; 
             display: flex; 
             flex-wrap: wrap; 
             justify-content: center; 
             gap: 40px; 
         }
 
+        /* Estilo de Tarjetas */
         .card { 
-            background-color: #1e1e1e; 
-            border-radius: 20px; 
-            width: 300px; 
+            background-color: #161616; 
+            border-radius: 25px; 
+            width: 320px; 
             padding: 40px; 
             text-align: center; 
             border: 1px solid #333; 
-            transition: 0.3s;
+            transition: all 0.3s ease; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .card:hover { 
             transform: translateY(-10px); 
             border-color: #d4af37; 
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.1);
         }
         
+        .icon { font-size: 60px; margin-bottom: 20px; }
+        .card h2 { margin: 10px 0; color: #ffffff; font-size: 2em; }
+        .card p { color: #bbbbbb; font-size: 1.1em; line-height: 1.5; margin-bottom: 30px; }
+
+        /* Botones VIP */
         .btn { 
             display: inline-block; 
-            padding: 12px 30px; 
-            background: #d4af37; 
+            padding: 15px 35px; 
+            background: linear-gradient(135deg, #d4af37 0%, #f3c93f 100%); 
             color: #000; 
             text-decoration: none; 
-            border-radius: 30px; 
+            border-radius: 50px; 
             font-weight: bold; 
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        .btn:hover { 
+            transform: scale(1.1);
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #444;
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -100,22 +132,39 @@
     </header>
 
     <div class="container">
+        
         <div class="card">
-            <h2>👑 Isla VIP</h2>
-            <p>Notificaciones premium.</p>
-            <a href="https://drive.google.com/drive/folders/1AeM97xgxHzhmKULLwXexRVPFtnuHqA5n?usp=drive_link" class="btn">Descargar</a>
+            <div>
+                <div class="icon">👑</div>
+                <h2>Isla VIP</h2>
+                <p>Notificaciones flotantes premium y elegantes para un control total.</p>
+            </div>
+            <a href="https://drive.google.com/drive/folders/1AeM97xgxHzhmKULLwXexRVPFtnuHqA5n?usp=drive_link" target="_blank" class="btn">Descargar</a>
         </div>
+
         <div class="card">
-            <h2>📻 JTBP</h2>
-            <p>Radio en tu bolsillo.</p>
-            <a href="https://jazztabueno-productions.vercel.app/" class="btn">Visitar</a>
+            <div>
+                <div class="icon">📻</div>
+                <h2>JTBP</h2>
+                <p>La experiencia definitiva en radio y entretenimiento musical.</p>
+            </div>
+            <a href="https://jazztabueno-productions.vercel.app/" target="_blank" class="btn">Visitar Web</a>
         </div>
+
         <div class="card">
-            <h2>🎹 Music Land</h2>
-            <p>Universo musical.</p>
-            <a href="https://music-land-app-5kl2.vercel.app/" class="btn">Visitar</a>
+            <div>
+                <div class="icon">🎹</div>
+                <h2>Music Land</h2>
+                <p>Explora un universo sonoro sin límites para mentes creativas.</p>
+            </div>
+            <a href="https://music-land-app-5kl2.vercel.app/" target="_blank" class="btn">Visitar Web</a>
         </div>
+
     </div>
+
+    <footer>
+        &copy; 2026 Yaju App Store - Todos los derechos reservados.
+    </footer>
 
 </body>
 </html>
