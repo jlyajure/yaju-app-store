@@ -30,6 +30,20 @@
             text-align: center; 
             border-bottom: 3px solid #d4af37; /* Línea Dorada VIP */
         }
+
+        /* 👑 ESTO ES LO NUEVO: EL ESTILO DEL LOGO 👑 */
+        .logo-principal {
+            width: 180px; /* Tamaño del logo */
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 50%; /* Hace que sea perfectamente redondo */
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4); /* Brillo dorado alrededor */
+            transition: transform 0.3s ease;
+        }
+        .logo-principal:hover {
+            transform: scale(1.05); /* Efecto de que crece un poquito al pasar el mouse */
+        }
+
         header h1 { 
             margin: 0; 
             color: #d4af37; 
@@ -114,6 +128,8 @@
 <body>
 
     <header>
+        <img src="yajuappstore.png" alt="Logo Yaju App Store" class="logo-principal">
+        
         <h1>Yaju App Store</h1>
         <p>Diseño, utilidad y entretenimiento reunidos en un solo lugar. Bienvenido al siguiente nivel.</p>
     </header>
