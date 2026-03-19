@@ -4,65 +4,186 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yaju App Store</title>
+
     <link rel="icon" type="image/png" href="yajuappstore.png">
 
+    <meta property="og:title" content="Yaju App Store">
+    <meta property="og:description" content="Diseño, utilidad y entretenimiento reunidos en un solo lugar. Bienvenido al siguiente nivel.">
+    <meta property="og:image" content="https://yaju-app-store.vercel.app/yajuappstore.png">
+    <meta property="og:url" content="https://yaju-app-store.vercel.app/">
+    <meta property="og:type" content="website">
+
     <style>
-        body { background-color: #121212; color: #ffffff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
+        /* Diseño General Dark Premium */
+        body { 
+            background-color: #121212; 
+            color: #ffffff; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            overflow-x: hidden;
+        }
         
+        /* Cabecera */
         header { 
-            background: linear-gradient(135deg, #1a1a1a, #000000); 
-            padding: 60px 20px; 
+            background: linear-gradient(180deg, #1a1a1a 0%, #000000 100%); 
+            padding: 80px 20px 60px 20px; 
             text-align: center; 
-            border-bottom: 3px solid #d4af37; 
+            border-bottom: 4px solid #d4af37; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        /* 👑 LOGO GRANDE Y REDONDO 👑 */
+        /* 👑 EL LOGO GRANDE Y REDONDO 👑 */
         .logo-principal {
-            width: 250px; /* Lo subí de tamaño para que se vea imponente */
-            height: auto;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.5)); /* Brillo dorado real */
+            width: 280px; /* Tamaño imponente */
+            height: 280px;
+            object-fit: cover;
+            border-radius: 50%; 
+            margin-bottom: 30px;
+            border: 3px solid #d4af37;
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.4); /* Brillo dorado */
+            transition: transform 0.4s ease;
+        }
+        .logo-principal:hover {
+            transform: scale(1.05) rotate(2deg);
         }
 
-        header h1 { margin: 0; color: #d4af37; font-size: 3em; text-transform: uppercase; }
-        header p { color: #aaaaaa; margin-top: 15px; font-style: italic; max-width: 600px; margin-left: auto; margin-right: auto; }
+        header h1 { 
+            margin: 0; 
+            color: #d4af37; 
+            font-size: 3.5em; 
+            letter-spacing: 3px; 
+            text-transform: uppercase; 
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+        header p { 
+            color: #aaaaaa; 
+            margin-top: 20px; 
+            font-size: 1.3em; 
+            font-style: italic;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
 
-        .container { max-width: 1100px; margin: 50px auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+        /* Contenedor de Tarjetas */
+        .container { 
+            max-width: 1200px; 
+            margin: 80px auto; 
+            padding: 0 20px; 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 50px; 
+        }
 
+        /* Estilo de Tarjetas */
         .card { 
-            background-color: #1e1e1e; border-radius: 20px; width: 300px; padding: 30px; 
-            text-align: center; border: 1px solid #333; transition: 0.3s;
+            background-color: #1e1e1e; 
+            border-radius: 25px; 
+            width: 320px; 
+            padding: 50px 30px; 
+            text-align: center; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.7); 
+            transition: all 0.3s ease; 
+            border: 1px solid #333; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        .card:hover { transform: translateY(-10px); border-color: #d4af37; }
+        .card:hover { 
+            transform: translateY(-15px); 
+            box-shadow: 0 20px 50px rgba(212, 175, 55, 0.15); 
+            border-color: #d4af37; 
+        }
         
+        .icon { font-size: 70px; margin-bottom: 20px; display: block; }
+        .card h2 { margin: 15px 0; color: #ffffff; font-size: 2em; letter-spacing: 1px; }
+        .card p { color: #bbbbbb; font-size: 1.1em; line-height: 1.6; margin-bottom: 40px; }
+
+        /* Botones Premium */
         .btn { 
-            display: inline-block; padding: 12px 25px; background-color: #d4af37; 
-            color: #000; text-decoration: none; border-radius: 30px; font-weight: bold; 
+            display: inline-block; 
+            padding: 15px 35px; 
+            background: linear-gradient(135deg, #d4af37 0%, #f3c93f 100%); 
+            color: #000000; 
+            text-decoration: none; 
+            border-radius: 50px; 
+            font-weight: bold; 
+            font-size: 1.1em;
+            text-transform: uppercase;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease; 
+        }
+        .btn:hover { 
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+        }
+        
+        .btn-outline { 
+            background: transparent; 
+            border: 2px solid #d4af37; 
+            color: #d4af37; 
+        }
+        .btn-outline:hover { 
+            background: #d4af37; 
+            color: #000000; 
+        }
+
+        /* Footer sencillo */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #555;
+            font-size: 0.9em;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
+
     <header>
-        <img src="yajuappstore.png" alt="Yaju App Store" class="logo-principal">
+        <img src="yajuappstore.png" alt="Logo Yaju App Store" class="logo-principal">
+        
         <h1>Yaju App Store</h1>
         <p>"Diseño, utilidad y entretenimiento reunidos en un solo lugar. Bienvenido al siguiente nivel."</p>
     </header>
+
     <div class="container">
+        
         <div class="card">
-            <h2>👑 Isla VIP</h2>
-            <p>Notificaciones flotantes premium.</p>
-            <a href="https://drive.google.com/drive/folders/1AeM97xgxHzhmKULLwXexRVPFtnuHqA5n?usp=drive_link" class="btn">Descargar</a>
+            <div>
+                <span class="icon">👑</span>
+                <h2>Isla VIP</h2>
+                <p>Notificaciones flotantes premium y elegantes para un control total de tus mensajes.</p>
+            </div>
+            <a href="https://drive.google.com/drive/folders/1AeM97xgxHzhmKULLwXexRVPFtnuHqA5n?usp=drive_link" target="_blank" class="btn">Descargar App</a>
         </div>
+
         <div class="card">
-            <h2>📻 JTBP</h2>
-            <p>Tu radio favorita en el bolsillo.</p>
-            <a href="https://jazztabueno-productions.vercel.app/" class="btn">Visitar</a>
+            <div>
+                <span class="icon">📻</span>
+                <h2>JTBP</h2>
+                <p>La experiencia definitiva en radio y entretenimiento directamente en tu dispositivo.</p>
+            </div>
+            <a href="https://jazztabueno-productions.vercel.app/" target="_blank" class="btn btn-outline">Visitar Web</a>
         </div>
+
         <div class="card">
-            <h2>🎹 Music Land</h2>
-            <p>Universo musical sin límites.</p>
-            <a href="https://music-land-app-5kl2.vercel.app/" class="btn">Visitar</a>
+            <div>
+                <span class="icon">🎹</span>
+                <h2>Music Land</h2>
+                <p>Explora un universo sonoro sin límites diseñado para mentes creativas.</p>
+            </div>
+            <a href="https://music-land-app-5kl2.vercel.app/" target="_blank" class="btn btn-outline">Visitar Web</a>
         </div>
+
     </div>
+
+    <footer>
+        &copy; 2026 Yaju App Store - Todos los derechos reservados.
+    </footer>
+
 </body>
 </html>
